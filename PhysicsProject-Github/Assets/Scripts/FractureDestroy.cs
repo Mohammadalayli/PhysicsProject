@@ -12,5 +12,11 @@ public class FractureDestroy : MonoBehaviour {
             Instantiate(cracked, transform.position, transform.rotation);
         }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Instantiate(cracked, transform.position, transform.rotation);
+        Debug.Log("Victory");
+    }
 }
